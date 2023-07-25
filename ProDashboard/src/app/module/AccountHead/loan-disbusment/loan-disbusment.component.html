@@ -1,0 +1,44 @@
+
+
+<h1 align="center" style="color: blueviolet;">All Sanction Details</h1>
+
+<table class="table" border="2">
+<tr style="background-color: cadetblue;">
+    <th>Customer Id</th>
+    <th>Sanctin Id</th>
+    <th>Customer first Name</th>
+    <th>Customer Last Name</th>
+    <th>Customer EmailId</th>
+    <th>Loan Amount Sanctioned</th>
+    <th>Tennure In Year</th>
+    <th>Mothly EMI</th>
+    <th>Bank Name</th>
+    <th>Bank IFSC Code</th>
+    <th>Account No</th>
+    <th>Account Balance</th>
+    <th>DisbuseMent Status</th>
+    <th>Disburse Loan</th>
+</tr>
+
+<tbody *ngFor="let c of GetAllData">
+    <tr  *ngIf="c.sactiondetails !==null">
+       
+        <td>{{c.custId}}</td>
+        <td>{{c.sactiondetails.sanctionId}}</td>
+        <td>{{c.custFirstName}}</td>
+        <td>{{c.custLastName}}</td>
+        <td>{{c.custEmailId}}</td>
+        <td>{{c.sactiondetails.loanAmountSanctioned}}</td>
+        <td>{{c.sactiondetails.tenureInYearSanctioned}}</td>
+        <td>{{c.sactiondetails.monthlyEmi}}</td>
+        <td>{{c.bankDetails.bankName}}</td>
+        <td>{{c.bankDetails.bankIFSCCode}}</td>
+        <td>{{c.bankDetails.accountNumber}}</td>
+        <td>{{c.bankDetails.accountBalance}}</td>
+        <td>{{c.sactiondetails.disbursementStatus}}</td>
+        <td><button type="button" class="btn btn-success" (click)="LoanDisburse(c.custId)"><b>Disburse Loan</b></button></td>
+    </tr>
+</tbody>
+</table>
+
+

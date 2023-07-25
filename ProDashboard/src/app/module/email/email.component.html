@@ -1,0 +1,12 @@
+
+<div align="center" >
+    <img src="https://www.axisbank.com/images/default-source/progress-with-us_new/auto-loan.jpg" alt="car img">
+<form [formGroup]="emailsender" >
+   <h3> Send Mail To:<input type="text" formControlName="custEmailId"><pre></pre></h3>
+
+    <button type="submit" class="btn btn-secondary" (click)="sendEmail()"><b>Send Success Mail</b></button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="submit" class="btn btn-secondary"(click)="sendRejectEmail()"><b>Send Reject Mail</b></button>
+</form>
+</div>
+

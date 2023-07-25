@@ -1,0 +1,92 @@
+<section class="h-100 bg-dark pooja">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="https://di-uploads-pod16.dealerinspire.com/vikingmotors/uploads/2018/10/car-financing-1.jpg"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .50rem; border-bottom-left-radius: .50rem;" />
+              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="btn btn-warning btn-lg ms-2"> Enquiry Form</h3>
+  
+                  <form action="enquiry" [formGroup]="enqRegis" (ngSubmit)="onRegisterEnquiry()">
+                    
+                  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="custFirstName" formControlName="custFirstName" />
+                        <label class="form-label" for="custFirstName">First_Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="custLastName" formControlName="custLastName" />
+                        <label class="form-label" for="custLastName">Last_Name</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="custContactNo" formControlName="custContactNo" />
+                        <label class="form-label" for="custContactNo">Contact_No</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="custEmailId" formControlName="custEmailId" />
+                        <label class="form-label" for="custEmailId">CustEmailId</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="custPANno" formControlName="custPANno" />
+                        <label class="form-label" for="custPANno">Cust_PANno</label>
+                      </div>
+                    </div>
+  
+                  </div>
+                  <div class="row">
+  
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="custLoanAmmount" formControlName="custLoanAmmount" />
+                        <label class="form-label" for="custLoanAmmount">Loan_Amount</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="custTennureYear" formControlName="custTennureYear" />
+                        <label class="form-label" for="custTennureYear">Tennure_Year</label>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="d-flex justify-content-end pt-3">
+                    <div class="top_link">
+                        <button type="submit" class="btn btn-warning btn-lg ms-2">
+                        <a href="#">Return home</a>
+                        </button>
+                    </div>
+                    <button type="submit" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

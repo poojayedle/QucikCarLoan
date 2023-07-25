@@ -1,0 +1,14 @@
+<div class="side-nav-content" class="navbar navbar-expand-lg navbar-dark bg-danger">
+
+    <ul class="nav-list" [ngClass]="{'nav-list-open':sideNavStatus}">
+        <li class="nav-list-item" *ngFor="let item of list[0][role]">
+         
+        <i class="{{item.icon}}"></i>
+        
+        <span>
+            <a [routerLink]="[role,item.path]">{{item.title}}</a>
+        </span>
+        </li>
+        
+    </ul>
+</div>

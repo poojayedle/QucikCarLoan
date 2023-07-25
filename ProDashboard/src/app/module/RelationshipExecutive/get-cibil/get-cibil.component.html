@@ -1,0 +1,42 @@
+
+
+
+<table border="1" class="table">
+  <thead>
+  <tr>
+      <th>user id</th>
+      <th>First Name</th>
+      <th>Last name</th>
+      <th>Contact No</th>
+      <th>EmailId</th>
+      <th>Pan No</th>
+      <th>Loan Amount</th>
+      <th>Tennure In year</th>
+      <th>Enquiry Status</th>
+      <th>SendEmail</th>
+      <th>ApplyLoan</th>
+      <th>Delete Enquiry</th>
+  </tr>
+</thead>
+  <tbody *ngFor="let e of allEnquiry">
+  <tr >
+      <td>{{e.custId}}</td>
+      <td>{{e.custFirstName}}</td>
+      <td>{{e.custLastName}}</td>
+      <td>{{e.custContactNo}}</td>
+      <td>{{e.custEmailId}}</td>
+      <td>{{e.custPANno}}</td>
+      <td>{{e.custLoanAmmount}}</td>
+      <td>{{e.custTennureYear}}</td>
+      <td>{{e.enquiryStatus}}</td>
+      <td><button type="submit" class="btn btn-success" (click)="sendEmail(e)">SendMail</button></td>
+     <!-- // <td><button type="submit" (click)="sendRejectEmail(e)">RejectMail</button></td> -->
+      <td><button type="submit" class="btn btn-success" (click)="navigateTo()">ApplyForLoan</button></td>
+
+      <td><button class="btn btn-danger" (click)="deleteById(e.custId)">Delete</button></td>
+  </tr>
+</tbody>
+</table>
+
+
+

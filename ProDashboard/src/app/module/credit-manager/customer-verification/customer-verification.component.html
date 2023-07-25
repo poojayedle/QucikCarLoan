@@ -1,0 +1,60 @@
+<h1 align="center">List Of All Verified Customers</h1>
+
+
+<table border="1" class="table">
+    <thead style="background-color: aqua;">
+<tr style="background-color: rgb(255, 127, 217);">
+<th>custId</th>
+<th>custFirstName</th>
+<th>custLastName</th>
+<th>custGender</th>
+<th>custContactNo</th>
+<th>custEmailId</th>
+<th>custProfession</th>
+<th>Local Address</th>
+<th>Permanent address</th>
+<th>pincode</th>
+<th>loanStatus</th>
+<th>requiredLoanamount</th>
+<th>pancard</th>
+<th>adharCard</th>
+<th>photo</th>
+<th>signature</th>
+<th>form16</th>
+<th>itr</th>
+<th>Account no</th>
+<th>Bank name</th>
+<th>Ifsc code</th>
+<th>Account balance</th>
+<th>Branch</th>
+<th>Generate Sanction letter</th>
+</tr></thead>
+<tbody>
+<tr *ngFor="let c of getAllVerifiedData">
+<td>{{c.custId}}</td>
+<td>{{c.custFirstName}}</td>
+<td>{{c.custLastName}}</td>
+<td>{{c.custGender}}</td>
+<td>{{c.custContactNo}}</td>
+<td>{{c.custEmailId}}</td>
+<td>{{c.custProfession}}</td>
+<td>{{c.address.localAddress}}</td>
+<td>{{c.address.permanentAddress}}</td>
+<td>{{c.address.pincode}}</td>
+<td>{{c.loanDetails.loanStatus}}</td>
+<td>{{c.loanDetails.requiredLoanamount}}</td>
+<td><img [src]="'data:image/jpeg;base64,'+c.docData.pancard" width="100" height="100"></td>
+<td><img [src]="'data:image/jpeg;base64,'+c.docData.adharCard" width="100" height="100"></td>
+<td><img [src]="'data:image/jpeg;base64,'+c.docData.photo" width="100" height="100"></td>
+<td><img [src]="'data:image/jpeg;base64,'+c.docData.signature" width="100" height="100"></td>
+<td><img [src]="'data:image/jpeg;base64,'+c.docData.form16" width="100" height="100"></td>
+<td><img [src]="'data:image/jpeg;base64,'+c.docData.itr" width="100" height="100"></td>
+<td>{{c.bankDetails.accountNumber}}</td>
+<td>{{c.bankDetails.bankName}}</td>
+<td>{{c.bankDetails.bankIFSCCode}}</td>
+<td>{{c.bankDetails.accountBalance}}</td>
+<td>{{c.bankDetails.branch}}</td>
+<td ><button (click)="generateSanctionLetter(c)">Generate Sanction Letter</button></td>
+</tr>
+</tbody>
+</table>

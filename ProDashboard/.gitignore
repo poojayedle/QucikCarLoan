@@ -1,0 +1,16 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+
+
+# Node
+/node_modules
+
+
+
+
+# Visual Studio Code
+.vscode/*
+
+
+# Miscellaneous
+/.angular/cache

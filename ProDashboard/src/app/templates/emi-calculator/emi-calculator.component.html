@@ -1,0 +1,81 @@
+<!-- <div class="container"> -->
+  <div style="background-color: #7cb6ec54;">
+    <h2 style="margin-left: 550px;">Home Loan EMI Calculator</h2>
+      <div class="row" style="padding: 15px; ">
+        
+        <div class="col-md-6" style="padding-left: 50px;">
+        
+          <div class="border p-4" style="background-color: rgba(62, 174, 174, 0.329);">
+            <form (ngSubmit)="calculateEMI()" #loanForm="ngForm">
+              <div class="form-group">
+                <label for="principalAmount">Principal Amount</label>
+                <input type="number" class="form-control" id="principalAmount" name="principalAmount" [(ngModel)]="principalAmount" required>
+              </div>
+              <div class="form-group">
+                <label for="interestRate">Interest Rate</label>
+                <input type="number" class="form-control" id="interestRate" name="interestRate" [(ngModel)]="interestRate" required>
+              </div>
+              <div class="form-group">
+                <label for="loanTenure">Loan Tenure (in months)</label>
+                <input type="number" class="form-control" id="loanTenure" name="loanTenure" [(ngModel)]="loanTenure" required>
+              </div>
+              <div class="form-group">
+                <label for="principalAmountSlider">Principal Amount</label>
+                <input type="range" class="form-control-range" id="principalAmountSlider" name="principalAmountSlider" min="100000" max="100000000" step="100000" [(ngModel)]="principalAmount" required>
+                <div class="d-flex justify-content-between">
+                  <span>₹100,000</span>
+                  <span>₹100,000,000</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="loanTenureSlider">Loan Tenure (in years)</label>
+                <input type="range" class="form-control-range" id="loanTenureSlider" name="loanTenureSlider" min="12" max="360" step="1" [(ngModel)]="loanTenure" required>
+                <div class="d-flex justify-content-between">
+                  <span>1 Year</span>
+                  <span>30 Years</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="interestRateSlider">Interest Rate</label>
+                <input type="range" class="form-control-range" id="interestRateSlider" name="interestRateSlider" min="1" max="30" step="0.1" [(ngModel)]="interestRate" required>
+                <div class="d-flex justify-content-between">
+                  <span>1%</span>
+                  <span>30%</span>
+                </div>
+              </div>
+              <br>
+              <button class="btn btn-primary" style="margin-left: 50px;"  (click)="calculateEMI()">Calculate EMI</button>
+              <button class="btn btn-primary" style="margin-left: 250px;" (click)="reloadcalculator()">Reload Calculate</button>
+            </form>
+          </div>
+        </div>
+  
+        <div class="col-md-6" style="padding-right: 50px;">
+          <div class="row">
+            <div class="col-md-12">
+              <div id="chart"></div>
+        </div>
+      
+      <div class="row">
+          <div class="col-md-12" style="margin-left: 100px;">
+          <div *ngIf="showResult">
+              <br>
+            <h2>Loan Details</h2>
+            <ul class="list-group">
+              <li class="list-group-item">EMI: {{emi | currency:'INR':true}}</li>
+              <li class="list-group-item">Total Interest Payable: {{totalInterestPayable | currency:'INR':true}}</li>
+              <li class="list-group-item">Total Amount Payable: {{(emi*loanTenure) | currency:'INR':true}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="color-codes">
+        <span class="color-code" style="background-color: #7cb5ec;"></span>
+        <span class="color-code" style="background-color: #FFC0CB;"></span>
+        <span class="color-code" style="background-color: #FF0000;"></span>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+    
+    

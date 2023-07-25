@@ -1,0 +1,442 @@
+<!-- 
+<div style="background-color: rgba(85, 10, 18, 0.647); height: 120%;">
+  <div style="text-align: center; background-color: rgba(140, 145, 36, 0.571);">
+      <h3>APPLY FOR LOAN</h3>
+   </div>
+<div class="col">
+<form [formGroup]="cregister"  style="margin-top: 5px; background-color: rgba(255, 253, 253, 0.541); border-radius: 5px;">
+
+
+
+<div class="form-group" style="margin-left: 330px; padding-top: 2%;">
+
+
+   <i class="fa fa-check-circle" style="font-size:25px; color:rgb(1, 176, 24)" *ngIf="step>=1"></i>
+
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=2"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=2"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=2"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=2"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=2"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=2"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=2"></i>
+
+   <i class="fa fa-check-circle" style="font-size:25px" *ngIf=" step==1"></i>
+   <i class="fa fa-check-circle" style="font-size:25px; color:rgb(1, 176, 24)" *ngIf=" step>=2"></i>
+
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1 || step==2"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1 || step==2"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1 || step==2"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1 || step==2"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1 || step==2"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1 || step==2"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1 || step==2"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=3"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=3"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=3"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=3"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=3"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=3"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=3"></i>
+
+   <i class="fa fa-check-circle" style="font-size:25px" *ngIf="step==2 || step==1"></i>
+   <i class="fa fa-check-circle" style="font-size:25px; color:rgb(1, 176, 24)" *ngIf="step>=3"></i>
+
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1 || step==2 || step==3"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1 || step==2 || step==3"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1 || step==2 || step==3"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1 || step==2 || step==3"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1 || step==2 || step==3"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1 || step==2 || step==3"></i>
+   <i class="fa fa-minus" style="font-size:15px;" *ngIf=" step==1 || step==2 || step==3"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=4 "></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=4"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=4"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=4"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=4"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=4"></i>
+   <i class="fa fa-minus" style="font-size:15px;color:rgb(1, 176, 24)" *ngIf="step>=4"></i>
+
+   <i class="fa fa-check-circle" style="font-size:25px" *ngIf="step==2 || step==1 || step==3"></i>
+   <i class="fa fa-check-circle" style="font-size:25px; color:rgb(1, 176, 24)" *ngIf="step>=4"></i>
+ 
+  
+ 
+  </div>
+
+
+<div class="form-row" formGroupName="customerdetails" *ngIf="step==1">
+
+
+<div class="col" style="padding: 2%;">
+<label>Customer First Name</label>
+<input type="text" class="form-control" formControlName="custFirstName">
+
+<label>Customer Last Name</label>
+<input type="text" class="form-control" formControlName="custLastName">
+
+</div>
+
+<div class="col" style="padding: 2%;">
+
+
+
+<label>Customer Mobile Number</label>
+<input type="number" class="form-control" formControlName="custContactNo">
+
+<label>Customer Email id</label>
+<input type="text" class="form-control" formControlName="custEmailId">
+
+<label>Customer Profession</label>
+<input type="text" class="form-control" formControlName="custProfession">
+
+<label>Customer Gender</label><br>
+  <div class="row" style="background-color: white; border-radius: 7px; margin-left: 4px; margin-right: 2px;">
+  <div class="col" style="margin-top: 4px;">
+    <input id="male" type="radio" value="Male" style="margin-right: 5px;" formControlName="custGender">
+    <label for="male">Male</label>
+ </div>
+
+ <div class="col" style="margin-top: 4px;">
+    <input id="female" type="radio" value="Female" style="margin-right: 5px;"  formControlName="custGender">
+    <label for="female">Female</label>
+ </div>
+</div>
+
+</div>
+
+
+
+
+</div>
+
+<div class="form-row" formGroupName="doc" *ngIf="step==2" style="margin-left: 20px;">
+
+
+  <div class="col" style="padding: 2%;">
+
+    <div>
+      <label style="margin-right: 35px;">Pancard</label>
+      <input type="file" class="form-control-file" id="pancard" (change)="onSelectPancard($event)">
+    </div>
+    
+    <div>
+      <label style="margin-right: 35px;">Income Proof</label>
+      <input type="file" class="form-control-file" id="form16" (change)="onSelectForm16($event)">
+    </div>
+
+    <div>
+      <label style="margin-right: 35px;">Aadhar Card</label>
+      <input type="file" class="form-control-file" id="adharCard" (change)="onSelectAdharcard($event)">
+    </div>
+    <div>
+      <label style="margin-right: 35px;">ITR:</label>
+      <input type="file" class="form-control-file" id="itr" (change)="onSelectitr($event)">
+    </div>
+       
+
+  </div>
+
+  <div class="col" style="padding: 2%;">
+    <div>
+      <label style="margin-right: 35px;">Photo</label>
+      <input type="file" class="form-control-file" id="photo" (change)="onSelectPhoto($event)">
+    </div>
+    
+
+    <div>
+      <label style="margin-right: 35px;">Signature</label>
+      <input type="file" class="form-control-file" id="signature" (change)=" onSelectSignature($event)">
+    </div> 
+    <div>
+      <label style="margin-right: 35px;">GuarantorPancard</label>
+      <input type="file" class="form-control-file" id="guarantorPancard" (change)="onSelectGuranterPan($event)">
+    </div>
+  
+  </div>
+
+</div>
+
+<div class="form-row" formGroupName="addr" *ngIf="step==3" style="margin-left: 20px;">
+
+  <div class="col" style="padding: 2%;">
+    
+    <label>LocalAddress</label>
+<input type="text" class="form-control" formControlName="localAddress">
+
+
+  </div> 
+
+  <div class="col" style="padding: 2%;">
+
+    <label>PermanentAddress</label>
+    <input type="text" class="form-control" formControlName="permanentAddress">
+  </div> 
+
+  <div class="col" style="padding: 2%;">
+    
+    <label>Permanent Address Pincode</label>
+<input type="text" class="form-control" formControlName="pincode">
+
+
+  </div> 
+</div> 
+
+<div class="form-row" formGroupName="bank" *ngIf="step==4" style="margin-left: 20px;">
+
+  <div class="col" style="padding: 2%;">
+  
+    <label>Customer Bank Name</label>
+    <input type="text" class="form-control" formControlName="bankName">
+
+    <label>Customer Bank IFCS Code</label>
+    <input type="text" class="form-control" formControlName="bankIFSCCode">
+  
+  </div>
+
+  <div class="col" style="padding: 2%;">
+
+    <label>Customer Bank Acount Number</label>
+    <input type="text" class="form-control" formControlName="accountNumber">
+  </div>
+  <div class="col" style="padding: 2%;">
+
+    <label>Customer  Acount Balance</label>
+    <input type="text" class="form-control" formControlName="accountBalance">
+  </div>
+  <div class="col" style="padding: 2%;">
+
+    <label>Customer Bank Branch Name</label>
+    <input type="text" class="form-control" formControlName="branch">
+  </div>
+
+</div>
+
+<div style="padding: 1%;">
+<button type="button" class="btn btn-outline-primary" style="margin-left: 100px; height: 45px;"  *ngIf="step!=1" (click)="previous()"><i class="fa fa-arrow-circle-left" style="font-size:20px"></i>PREVIOUS</button>
+<button type="button"  class="btn btn-outline-primary " style="margin-left: 200px; height: 45px" *ngIf="step<=3" (click)="next()"> NEXT <i class="fa fa-arrow-circle-right" style="font-size:20px;"></i> </button> 
+<button type="submit" class="btn btn-outline-success" *ngIf="step==4" style="margin-left: 200px; " (click)="savecustomer()">SUBMIT <i class="fa fa-check-square" style="font-size:20px"></i></button>
+</div>
+
+  
+</form>
+</div>
+</div>
+   -->
+
+   <section class="h-100 bg-dark pooja">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="https://di-uploads-pod16.dealerinspire.com/vikingmotors/uploads/2018/10/car-financing-1.jpg"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .50rem; border-bottom-left-radius: .50rem;" />
+              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="btn btn-warning btn-lg ms-2">  Loan Application Form</h3>
+  
+                  <form  [formGroup]="saveCustomer" (ngSubmit)="Customersave()">
+                    
+                   
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="custFirstName" formControlName="custFirstName" />
+                        <label class="form-label" for="custFirstName">First_Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="custLastName" formControlName="custLastName" />
+                        <label class="form-label" for="custLastName">Last_Name</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="custContactNo" formControlName="custContactNo" />
+                        <label class="form-label" for="custContactNo">Contact_No</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="custEmailId" formControlName="custEmailId" />
+                        <label class="form-label" for="custEmailId">custEmailId</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input type="text" id="custEmailId" formControlName="custGender" />
+                          <label class="form-label" for="custEmailId">cust Gender</label>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" id="custEmailId" formControlName="custProfession" />
+                            <label class="form-label" for="custEmailId">cust Profession</label>
+                          </div>
+                        </div>
+                    </div>
+                   </div>
+  
+                  
+                 
+                   <div formGroupName="loanDetails"> 
+                     <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input type="text" id="custTennureYear" formControlName="loanStatus" />
+                          <label class="form-label" for="custTennureYear">Loan Status</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input type="text" id="custTennureYear" formControlName="requiredLoanamount" />
+                          <label class="form-label" for="custTennureYear">Requred Loan Amount</label>
+                        </div>
+                      </div> 
+                    </div> 
+  
+                  <div formGroupName="address">
+  
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="custTennureYear" formControlName="localAddress" />
+                      <label class="form-label" for="custTennureYear">Local Address</label>
+                    </div>
+                  </div>
+                
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="custTennureYear" formControlName="permanentAddress" />
+                      <label class="form-label" for="custTennureYear">permanent Address</label>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="custTennureYear" formControlName="pincode" />
+                      <label class="form-label" for="custTennureYear">pincode </label>
+                    </div>
+                  </div>
+                 </div>
+                 
+                 <div formGroupName="bankDetails">
+  
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="custTennureYear" formControlName="accountNumber" />
+                      <label class="form-label" for="custTennureYear">Account Number</label>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="custTennureYear" formControlName="bankName" />
+                      <label class="form-label" for="custTennureYear">Bank Name</label>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="custTennureYear" formControlName="bankIFSCCode" />
+                      <label class="form-label" for="custTennureYear">Bank IFSC Code</label>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="custTennureYear" formControlName="accountBalance" />
+                      <label class="form-label" for="custTennureYear">accountBalance</label>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="custTennureYear" formControlName="branch" />
+                      <label class="form-label" for="custTennureYear">Branch</label>
+                    </div>
+                  </div>
+  
+                 </div>
+  
+                
+              
+                 <div formGroupName="docData">
+  
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="file" id="custTennureYear" (change)="onSelectPancard($event)" />
+                      <label class="form-label" for="custTennureYear">Pancard</label>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="file" id="custTennureYear" (change)="onSelectAdharcard($event)" />
+                      <label class="form-label" for="custTennureYear">Adhar Card</label>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="file" id="custTennureYear" (change)="onSelectPhoto($event)" />
+                      <label class="form-label" for="custTennureYear">Photo</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="file" id="custTennureYear" (change)="onSelectSignature($event)" />
+                      <label class="form-label" for="custTennureYear">Signature</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="file" id="custTennureYear" (change)="onSelectForm16($event)" />
+                      <label class="form-label" for="custTennureYear" style="color: brown;">Upload Form16 if you are Employee otherwise Upload ITR </label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="file" id="custTennureYear" (change)="onSelectitr($event)" />
+                      <label class="form-label" for="custTennureYear" style="color: brown;">Upload Form16 if you are Employee otherwise Upload ITR </label>
+                    </div>
+                  </div>
+                 
+  
+                 </div>
+  
+                  <div class="d-flex justify-content-end pt-3">
+                    <div class="top_link">
+                        <button type="submit" class="btn btn-warning btn-lg ms-2">
+                        <a href="#">Return home</a>
+                        </button>
+                    </div>
+                    <button type="submit" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 

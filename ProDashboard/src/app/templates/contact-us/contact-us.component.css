@@ -1,0 +1,72 @@
+.contact-page-sec {
+    padding: 60px 0;
+    min-height: 100vh;
+}
+
+.contact-info {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contact-info-item {
+    background: rgba(7,28,52,0.8);
+    border-radius: 20px;
+    padding: 30px 0px;
+}
+
+.contact-info-text {
+    color: #ffffff;
+}
+
+.contact-info-text h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-info-text p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+/* Font Awesome styles */
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-map-marker::before {
+    content: "\f3c5";
+    color: red;
+}
+
+.fa-phone::before {
+    content: "\f095";
+    color: orange;
+}
+
+.fa-envelope::before {
+    content: "\f0e0";
+    color: green;
+}
+
+.fa-clock::before {
+    content: "\f017";
+    color: purple;
+}
+
+.fa-map::before {
+    content: "\f279";
+    color: yellow;
+}

@@ -1,0 +1,172 @@
+<ngx-ui-loader text="Please Wait" fgsType="rectangle-bounce-pulse-out-rapid"></ngx-ui-loader>
+<router-outlet></router-outlet>
+
+
+
+<!-- <div class="container-fluid g-0">
+  <app-header (sideNavToggled)="sideNavStatus=$event;"></app-header>
+  <main>
+      <app-side-nav [sideNavStatus]="sideNavStatus" [ngClass]="{'app-side-nav-open':sideNavStatus}"></app-side-nav>
+      <div  class="display-area " [ngClass]="{'display-area-shrink':sideNavStatus}"  >
+          <p class="fs-1 fw-bold fst-italic">Main Display Area</p>
+      </div>
+  </main>
+  </div> -->
+
+
+   
+  <!-- fff -->
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <h1>Quick_Car_Loan</h1>
+  
+<h3>Apply_Loan</h3>
+ 
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Basic Details</ng-template>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName="customerName" required>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>Age</mat-label>
+        <textarea matInput placeholder="Age" formControlName="customerAge" required>
+        </textarea>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>ContactNo</mat-label>
+        <textarea matInput placeholder="PhonNo" formControlName="customerMobNo" required>
+        </textarea>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>Profession</mat-label>
+        <textarea matInput placeholder="Profession" formControlName="customerProfession" required>
+        </textarea>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>EmailId</mat-label>
+        <textarea matInput placeholder="Email" formControlName="customerEmail" required>
+        </textarea>
+      </mat-form-field>
+      <br/>
+      
+      <mat-form-field>
+        <mat-label>Amount</mat-label>
+        <textarea matInput placeholder="Amount" formControlName="quotationAmount" required>
+        </textarea>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>CibilScore</mat-label>
+        <textarea matInput placeholder="Cibil" formControlName="cibilScore" required>
+        </textarea>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <textarea matInput placeholder="Address" formControlName="address" required>
+        </textarea>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>Bank</mat-label>
+        <textarea matInput placeholder="Bank" formControlName="bank" required>
+        </textarea>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>LoanDetails</mat-label>
+        <textarea matInput placeholder="LoanDetails" formControlName="loanDetails" required>
+        </textarea>
+      </mat-form-field>
+
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Amount & Stock</ng-template>
+      <mat-form-field>
+        <mat-label>Amount</mat-label>
+        <input matInput placeholder="Amount" formControlName="amount" required>
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <mat-label>EMI</mat-label>
+        <input matInput placeholder="EMI" formControlName="emi" required>
+      </mat-form-field>
+      <br/>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+  <mat-form-field>
+    <mat-label>PanCardNo</mat-label>
+    <textarea matInput placeholder="PAN" formControlName="customerPancard" required>
+    </textarea>
+  </mat-form-field>
+  <br/>
+  <mat-form-field>
+    <mat-label>Adhar</mat-label>
+    <textarea matInput placeholder="Adhar" formControlName="customerAadharcard" required>
+    </textarea>
+  </mat-form-field>
+  <br/>
+  <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+  
+    <mat-list>
+	 <mat-list-item> <strong>Name:</strong> {{ this.firstFormGroup.value.customerName }}</mat-list-item>
+	 <mat-list-item> <strong>Age:</strong> {{ this.firstFormGroup.value.customerAge }}</mat-list-item>
+   <mat-list-item> <strong>MobNo:</strong> {{ this.firstFormGroup.value.customerMobNo }}</mat-list-item>
+   <mat-list-item> <strong>Profession:</strong> {{ this.firstFormGroup.value.customerProfession }}</mat-list-item>
+   <mat-list-item> <strong>emailId:</strong> {{ this.firstFormGroup.value.customerEmail }}</mat-list-item>
+   <mat-list-item> <strong>PanCardNo:</strong> {{ this.firstFormGroup.value.customerPancard }}</mat-list-item>
+   <mat-list-item> <strong>AdharCardNo:</strong> {{ this.firstFormGroup.value.customerAadharcard }}</mat-list-item>
+   <mat-list-item> <strong>QuationAmount:</strong> {{ this.firstFormGroup.value.quotationAmount }}</mat-list-item>
+   <mat-list-item> <strong>CibilScore:</strong> {{ this.firstFormGroup.value.cibilScore }}</mat-list-item>
+   <mat-list-item> <strong>Address:</strong> {{ this.firstFormGroup.value.address }}</mat-list-item>
+   <mat-list-item> <strong>Bank:</strong> {{ this.firstFormGroup.value.bank }}</mat-list-item>
+   <mat-list-item> <strong>LoanDetails:</strong> {{ this.firstFormGroup.value.loanDetails }}</mat-list-item>
+
+	 <mat-list-item> <strong>Amount:</strong> {{ this.secondFormGroup.value.amount }}</mat-list-item>
+	 <mat-list-item> <strong>EMI:</strong> {{ this.secondFormGroup.value.emi }}</mat-list-item>
+	</mat-list>
+  
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+      <button mat-button (click)="submit()">Submit</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper> -->
